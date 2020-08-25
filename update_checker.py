@@ -52,7 +52,7 @@ def print_message(updates):
             ),
             end="\n",
         )
-        print(*updates, sep=", ", end="\n")
+        print(*updates, sep="\n", end="\n")
 
 
 def check_data_directory():
@@ -86,9 +86,9 @@ def main():
         if add_sites == "y":
             with open(os.path.join(os.getcwd(), SITE_LIST), "a+") as site_list:
                 new_sites = input(
-                    "Add a site you would like to monitor.\
-                    You can also enter multiple sites, separated by a space.\
-                    Please enter the whole url, starting with http. e.g. http://www.google.com \n"
+                    'Add a site you would like to monitor.'
+                    'You can also enter multiple sites, separated by a space.\n'
+                    'Please enter the whole url, starting with http. e.g. http://www.google.com \n'
                 ).split()
                 for site in new_sites:
                     compare_hash(site)
